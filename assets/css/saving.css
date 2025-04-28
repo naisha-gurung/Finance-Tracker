@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eafaf8;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100;
+  background-color: #00856f;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 15px 30px;
+  margin: 0 20px;
+  background-color: #48a38f;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #004d3b;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.goal-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.goal-form input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  max-width: 300px;
+}
+
+.goal-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00856f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.goal-form button:hover {
+  background-color: #218838;
+}
+
+#goalsList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.goal-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: #e9ecef;
+  border-radius: 5px;
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px 0;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #28a745;
+  width: 0%;
+}
+
+.update-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.update-form input {
+  width: 80px;
+  padding: 5px;
+}
+
+.update-form button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #0056b3;
+}

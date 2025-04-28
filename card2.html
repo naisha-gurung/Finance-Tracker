@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+    <link href="assets/css/card.css" rel="stylesheet">
+    <title>Card - My Money</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="assets/img/logo.jpg" alt="Logo" height="100px" width="100px">
+        <a href="dashboard.html">Home</a>
+        <a href="track.html">Tracker</a>
+        <a href="card2.html">Card</a>
+        <a href="saving.html">Savings</a>
+        <a href="temp1.html">Learn More</a>
+        <a href="ABOUT US.html">About Us</a>
+        <a href="index.html">Log in</a>
+    </div>
+
+    <h2>Add Card Details</h2>
+
+    <div class="form-container">
+        <input type="date" id="date" required placeholder="Date">
+        <input type="text" id="cardNumber" placeholder="Card Number" required>
+        <input type="month" id="validThru" placeholder="Valid Thru" required>
+        <input type="number" id="balance" placeholder="Balance" required>
+        <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+
+    <div class="table-container">
+        <table id="transactionTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Card Number</th>
+                    <th>Valid Thru</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transaction rows will be populated here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const transactionData = [];
+        const tableBody = document.getElementById('transactionTable').querySelector('tbody');
+
+        function addTransaction() {
+            const date = document.getElementById('date').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const validThru = document.getElementById('validThru').value;
+            const balance = parseFloat(document.getElementById('balance').value);
+
+            if (date && cardNumber && validThru && balance) {
+                const transaction = { date, cardNumber, validThru, balance };
+                transactionData.push(transaction);
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${transaction.date}</td>
+                    <td>${transaction.cardNumber}</td>
+                    <td>${transaction.validThru}</td>
+                    <td>$${transaction.balance.toFixed(2)}</td>
+                `;
+                tableBody.appendChild(row);
+
+                document.getElementById('date').value = '';
+                document.getElementById('cardNumber').value = '';
+                document.getElementById('validThru').value = '';
+                document.getElementById('balance').value = '';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+
+</html>

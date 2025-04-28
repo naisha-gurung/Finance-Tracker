@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - My Money</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+    <link rel="stylesheet" href="assets/css/about us.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="assets/img/logo.jpg" alt="Logo" height="100px" width="100px">
+            <a href="dashboard.html">Home</a>
+            <a href="#" onclick="navigateTo('track.html')">Tracker</a>
+            <a href="#" onclick="navigateTo('card2.html')">Card</a>
+            <a href="#" onclick="navigateTo('saving.html')">Savings</a>
+            <a href="#" onclick="navigateTo('temp1.html')">Learn More</a>
+            <a href="ABOUT US.html">About us</a>
+            <a href="#" onclick="login()">Log in</a>
+    </header>
+
+    <section class="intro">
+        <h1>About Us</h1>
+        <p>Welcome to our company. We are a passionate team dedicated to providing the best solutions for your needs.
+        </p>
+    </section>
+
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to deliver high-quality products and services that exceed our customers' expectations.</p>
+    </section>
+
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member" onclick="toggleInfo('member1-info')">
+            <img src="assets/img/p4.png" alt="Team Member 1">
+            <h3>NANDINI SHARMA</h3>
+            <p>CEO & Founder</p>
+
+        </div>
+        <div class="team-member" onclick="toggleInfo('member2-info')">
+            <img src="assets/img/p2.png" alt="Team Member 2">
+            <h3>NAISHA GURUNG</h3>
+            <p>CTO</p>
+        </div>
+        <div class="team-member" onclick="toggleInfo('member3-info')">
+            <img src="assets/img/p3.png" alt="Team Member 3">
+            <h3>HARDIK SINGLA</h3>
+            <p>CTO</p>
+
+        </div>
+
+    </section>
+
+    <footer style="width: 1403px;">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <div class="modal" id="loginModal">
+        <p>You need to log in to access this page.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+
+    <script>
+        // Function to toggle additional information about team members
+        function toggleInfo(infoId) {
+            const info = document.getElementById(infoId);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+        // Check login state
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        function navigateTo(page) {
+            if (!isLoggedIn) {
+                document.getElementById('loginModal').classList.add('active');
+                document.getElementById('overlay').classList.add('active');
+            } else {
+                window.location.href = page;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        function login() {
+            localStorage.setItem('isLoggedIn', 'false');
+            alert('Redirecting to login page...');
+            window.location.href = 'index.html';
+        }
+    </script>
+    </script>
+</body>
+
+</html>

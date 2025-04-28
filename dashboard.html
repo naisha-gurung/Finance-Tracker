@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My money</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+    <link href="assets/css/projectfee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="assets/img/logo.jpg" alt="Logo" height="100px" width="100px">
+        <a href="dashboard.html">Home</a>
+        <a href="#" onclick="navigateTo('track.html')">Tracker</a>
+        <a href="#" onclick="navigateTo('card2.html')">Card</a>
+        <a href="#" onclick="navigateTo('saving.html')">Savings</a>
+        <a href="#" onclick="navigateTo('temp1.html')">Learn More</a>
+        <a href="ABOUT US.html">About us</a>
+        <a href="#" onclick="login()">Log in</a>
+    </div>
+    <div class="content">
+        <h1>Explore the financial tools and make your life easier</h1>
+        <p>Keep tabs on your money in one place. Link your accounts from more than 17,000 financial institutions.</p>
+
+    </div>
+
+    <div class="dashboard-content">
+        <h1 class="card-title animate__animated animate__fadeIn">Welcome to Your Finance Dashboard</h1>
+        <p>Manage your finances, view transactions, and track income and expenses. Select an option from the menu above
+            to
+            get started.</p>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>Net worth</h2>
+            <h3>$189,334</h3>
+            <ul>
+                <li><span class="label">Assets</span> <span class="amount">$409,462</span></li>
+                <li><span class="label">Cash</span> <span class="amount">$12,345</span></li>
+                <li><span class="label">Investments</span> <span class="amount">$15,367</span></li>
+                <li><span class="label">Property</span> <span class="amount">$381,750</span></li>
+                <li><span class="label">Debt</span> <span class="amount">$296,308</span></li>
+            </ul>
+            <a href="transction.html" class="learn-more-btn">Learn more</a>
+        </div>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <p>You need to log in to access this page.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="section">
+        <div class="text-content">
+            <h1>Track your monthly spending and more.</h1>
+            <p>Review your transactions, track your spending by category and receive monthly insights.</p>
+        </div>
+
+        <div class="phone-visual">
+            <div class="phone-mockup">
+                <div class="spending-summary">May spending <div>$3,507</div>
+                </div>
+                <div class="spending-change">
+                    <span>&#x25BC; $100 from this time in April</span><br>
+                    <span>16 days left this month</span>
+                </div>
+                <div class="spending-bar-chart">
+                    <div class="bar" style="width: 90%;">$5.7k</div>
+                    <div class="bar" style="width: 85%;">$5.9k</div>
+                    <div class="bar" style="width: 60%;">$6.1k</div>
+                    <div class="bar" style="width: 70%;">$4.7k</div>
+                    <div class="bar" style="width: 80%;">$5.9k</div>
+                    <div class="bar" style="width: 50%;">$3.5k</div>
+                </div>
+                <div class="spending-categories">
+                    <span>Top spending</span>
+                    <a href="track.html">See all</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Not your actual amounts. For display only.</p>
+    </footer>
+
+    <script src="assets/js/dashboard.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saving Goals - My Money</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.jpg">
+  <link href="assets/css/saving.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <img src="assets/img/logo.jpg" alt=" Logo" height="100px" width="100px">
+      <a href="dashboard.html">Home</a>
+      <a href="track.html">Tracker</a>
+      <a href="card2.html">Card</a>
+      <a href="saving.html">Savings</a>
+      <a href="temp1.html">Learn More</a>
+      <a href="ABOUT US.html">About us</a>
+      <a href="index.html">log in</a>
+    </div>
+
+  </header>
+
+  <div class="container">
+    <h1>Saving Goals Tracker</h1>
+
+    <!-- Form to Add New Goal -->
+    <div class="goal-form">
+      <h2>Add a Saving Goal</h2>
+      <input type="text" id="goalName" placeholder="Goal Name (e.g., Buy a Laptop)" />
+      <input type="number" id="targetAmount" placeholder="Target Amount ($)" />
+      <input type="number" id="savedAmount" placeholder="Saved Amount ($)" />
+      <button id="addGoal">Add Goal</button>
+    </div>
+
+    <!-- Goals List -->
+    <div id="goalsList">
+      <h2>Your Goals</h2>
+      <ul id="goalItems"></ul>
+    </div>
+  </div>
+  <script src="assets/js/Saving.js"></script>
+</body>
+
+</html>
