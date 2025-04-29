@@ -1,5 +1,4 @@
-  // Check login state
-  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
   function navigateTo(page) {
       if (!isLoggedIn) {
