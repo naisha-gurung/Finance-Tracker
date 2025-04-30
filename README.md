@@ -11,7 +11,7 @@ A lightweight, web-based personal finance tracker to help users monitor income, 
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Frontend:** HTML5, CSS3, JavaScript
 
 ## Screenshots
 ![image](https://github.com/user-attachments/assets/96d132a4-e984-4c62-a123-aa22cad7aa15)
