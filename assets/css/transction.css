@@ -68,7 +68,6 @@ form button {
     cursor: pointer;
     font-size: 1em;
 }
-
 form button:hover {
     background-color: #006f59;
 }
